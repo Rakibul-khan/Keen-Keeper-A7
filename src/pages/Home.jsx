@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense } from "react";
 import Banner from "../components/Banner";
 import Friends from "../components/Friends";
 
@@ -8,7 +8,15 @@ const Home = () => {
   return (
     <div className="bg-[#f8fafc]">
       <Banner></Banner>
-      <Friends fetchPromise={fetchPromise}></Friends>
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center my-8">
+            <span className="loading loading-spinner loading-xl "></span>
+          </div>
+        }
+      >
+        <Friends fetchPromise={fetchPromise}></Friends>
+      </Suspense>
     </div>
   );
 };

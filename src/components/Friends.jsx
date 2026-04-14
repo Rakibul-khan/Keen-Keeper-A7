@@ -8,7 +8,7 @@ const Friends = ({ fetchPromise }) => {
     <div>
       <div className="w-10/12 mx-auto">
         <h1 className="font-bold text-4xl my-6">Your Friends</h1>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-4 my-8">
           {friends.map((friend) => (
             <Friend key={friend.id} friend={friend}></Friend>
           ))}

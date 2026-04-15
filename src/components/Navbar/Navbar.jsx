@@ -1,6 +1,6 @@
 import { ChartLine, House, TimerIcon } from "lucide-react";
 import React from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   return (
@@ -52,25 +52,40 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-3">
           <li className="font-semibold">
-            <Link>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive ? "bg-[#244d3f] text-white" : ""
+              }
+            >
               <House />
               Home
-            </Link>
+            </NavLink>
           </li>
 
           <li className="font-semibold">
-            <Link>
+            <NavLink
+              to={"/timeline"}
+              className={({ isActive }) =>
+                isActive ? "bg-[#244d3f] text-white" : ""
+              }
+            >
               <TimerIcon />
               Timeline
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link>
+            <NavLink
+              to={"/stats"}
+              className={({ isActive }) =>
+                isActive ? "bg-[#244d3f] text-white" : ""
+              }
+            >
               <ChartLine />
               Stats
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

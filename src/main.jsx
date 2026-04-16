@@ -7,6 +7,7 @@ import HomeLayout from "./HomeLayout/HomeLayout.jsx";
 import Home from "./pages/Home.jsx";
 import FriendDetails from "./pages/FriendDetails.jsx";
 import TimeLinePage from "./pages/TimeLinePage.jsx";
+import Stats from "./pages/Stats.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/timeline",
         Component: TimeLinePage,
+      },
+      {
+        path: "/stats",
+        Component: Stats,
       },
     ],
   },

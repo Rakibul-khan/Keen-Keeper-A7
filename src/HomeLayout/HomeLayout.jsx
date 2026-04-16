@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import { TimeLineContext } from "../contexts/TimeLineContext";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 const HomeLayout = () => {
   const [timeLineData, setTimeLineData] = useState([]);
@@ -12,6 +13,7 @@ const HomeLayout = () => {
       <Navbar></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>
+      <ToastContainer />
     </TimeLineContext.Provider>
   );
 };

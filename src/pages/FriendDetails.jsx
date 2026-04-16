@@ -7,6 +7,7 @@ import TextImg from "../assets/text.png";
 import VideoImg from "../assets/video.png";
 import MeetupImg from "../assets/meetup.png";
 import { format } from "date-fns";
+import { toast } from "react-toastify";
 
 const fetchPromise = fetch("/friends.json").then((res) => res.json());
 const FriendDetails = () => {
@@ -100,21 +101,22 @@ const FriendDetails = () => {
             </h1>
             <div className="flex gap-2">
               <button
-                onClick={() =>
-                  setTimeLineData([
-                    ...timeLineData,
-                    {
-                      text: (
-                        <>
-                          <span className="text-lg font-semibold">Call</span>{" "}
-                          with {name}
-                        </>
-                      ),
-                      icon: PhoneImg,
-                      date: format(new Date(), "MMMM d, yyyy"),
-                    },
-                  ])
-                }
+                onClick={() => {
+                  (toast.success(`Call with ${name}`),
+                    setTimeLineData([
+                      ...timeLineData,
+                      {
+                        text: (
+                          <>
+                            <span className="text-lg font-semibold">Call</span>{" "}
+                            with {name}
+                          </>
+                        ),
+                        icon: PhoneImg,
+                        date: format(new Date(), "MMMM d, yyyy"),
+                      },
+                    ]));
+                }}
                 className="bg-gray-200 border-2 border-gray-200 px-20 py-3  rounded-lg cursor-pointer"
               >
                 <span>
@@ -123,7 +125,8 @@ const FriendDetails = () => {
                 <h1>Call</h1>
               </button>
               <button
-                onClick={() =>
+                onClick={() => {
+                  toast.success(`Text with ${name}`);
                   setTimeLineData([
                     ...timeLineData,
                     {
@@ -136,8 +139,8 @@ const FriendDetails = () => {
                       icon: TextImg,
                       date: format(new Date(), "MMMM d, yyyy"),
                     },
-                  ])
-                }
+                  ]);
+                }}
                 className="bg-gray-200 border-2 border-gray-200 px-20 py-3  rounded-lg cursor-pointer"
               >
                 <span>
@@ -146,7 +149,8 @@ const FriendDetails = () => {
                 <h1>Text</h1>
               </button>
               <button
-                onClick={() =>
+                onClick={() => {
+                  toast.success(`Video with ${name}`);
                   setTimeLineData([
                     ...timeLineData,
                     {
@@ -159,8 +163,8 @@ const FriendDetails = () => {
                       icon: VideoImg,
                       date: format(new Date(), "MMMM d, yyyy"),
                     },
-                  ])
-                }
+                  ]);
+                }}
                 className="bg-gray-200 border-2 border-gray-200 px-20 py-3  rounded-lg cursor-pointer"
               >
                 <span>

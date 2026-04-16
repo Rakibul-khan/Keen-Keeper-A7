@@ -31,7 +31,7 @@ const FriendDetails = () => {
 
   return (
     <div className=" bg-[#f8fafc] p-10">
-      <div className=" w-10/12 mx-auto flex justify-between ">
+      <div className=" w-10/12 mx-auto flex flex-col md:flex-row justify-between ">
         <div className="left">
           <div className="shadow bg-white rounded-lg p-4 flex flex-col justify-center items-center space-y-2">
             <img className="rounded-full" src={picture} alt={""} />
@@ -62,7 +62,7 @@ const FriendDetails = () => {
           </div>
         </div>
         <div className="right">
-          <div className="flex gap-12">
+          <div className="flex flex-col md:flex-row gap-12">
             <div className="shadow p-6 rounded-lg bg-white text-center">
               <h1 className="text-3xl font-semibold text-[#244D3F]">
                 {days_since_contact}
@@ -99,7 +99,7 @@ const FriendDetails = () => {
             <h1 className="font-medium text-[20px] text-[#244D3F] mb-2">
               Quick Check-In
             </h1>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <button
                 onClick={() => {
                   (toast.success(`Call with ${name}`),

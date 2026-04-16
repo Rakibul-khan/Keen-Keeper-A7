@@ -113,6 +113,7 @@ const FriendDetails = () => {
                           </>
                         ),
                         icon: PhoneImg,
+                        type: "call",
                         date: format(new Date(), "MMMM d, yyyy"),
                       },
                     ]));
@@ -137,6 +138,7 @@ const FriendDetails = () => {
                         </>
                       ),
                       icon: TextImg,
+                      type: "text",
                       date: format(new Date(), "MMMM d, yyyy"),
                     },
                   ]);
@@ -161,6 +163,7 @@ const FriendDetails = () => {
                         </>
                       ),
                       icon: VideoImg,
+                      type: "video",
                       date: format(new Date(), "MMMM d, yyyy"),
                     },
                   ]);

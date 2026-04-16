@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center pt-20">
-        <h1 className="font-bold text-5xl ">
+        <h1 className="font-bold text-3xl text-center md:text-left md:text-5xl ">
           Friends to keep close in your life
         </h1>
         <p className="text-center my-3 ">
@@ -15,7 +15,7 @@ const Banner = () => {
           + Add a Friend
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-6 w-10/12 mx-auto py-15">
+      <div className="grid  md:grid-cols-4 gap-6 w-10/12 mx-auto py-15">
         <div className="bg-white shadow  rounded-lg flex flex-col items-center py-5">
           <h1 className="font-semibold text-4xl my-1 ">10</h1>
           <span className="text-[18px]">Total Friends</span>

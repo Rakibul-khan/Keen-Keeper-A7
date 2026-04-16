@@ -18,9 +18,9 @@ const Footer = () => {
           <img src={FacebookImg} alt="facebook" />
           <img src={TwitterImg} alt="twitter.com" />
         </div>
-        <div className="flex items-center justify-between gap-30">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-30">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
-          <ul className="flex gap-2 items-center">
+          <ul className="flex flex-col md:flex-row gap-2 items-center">
             <li>Privacy Policy</li>
             <li>Terms of Service </li>
             <li>Cookies</li>

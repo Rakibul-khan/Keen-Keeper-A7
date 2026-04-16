@@ -28,22 +28,39 @@ const Navbar = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
+            <li className="font-semibold">
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? "bg-[#244d3f] text-white" : ""
+                }
+              >
+                <House />
+                Home
+              </NavLink>
+            </li>
+
+            <li className="font-semibold">
+              <NavLink
+                to={"/timeline"}
+                className={({ isActive }) =>
+                  isActive ? "bg-[#244d3f] text-white" : ""
+                }
+              >
+                <TimerIcon />
+                Timeline
+              </NavLink>
             </li>
             <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
+              <NavLink
+                to={"/stats"}
+                className={({ isActive }) =>
+                  isActive ? "bg-[#244d3f] text-white" : ""
+                }
+              >
+                <ChartLine />
+                Stats
+              </NavLink>
             </li>
           </ul>
         </div>

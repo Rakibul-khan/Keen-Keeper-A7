@@ -1,16 +1,27 @@
-# React + Vite
+# KeenKeeper - Keep Your Friendship Alive
+### Project Description -
+##### KeenKeeper is a responsive friendship management web application that helps user stays connected with their friends. It allows users to track interactions,manage contact goals and maintain meaningful relationship through an inituitive and clean interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Technologies Used 
+💠React JS
+<br>
+💠React Router DOM
+<br>
+💠Tailwind CSS
+<br>
+💠Recharts
+<br>
+💠JavaScript(ES6+)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Key Features
+### 1. 👥 Friend Management System: 
+💠Displays a list of friends with detailed information <br>
+💠Includes profile, tags, status, and contact tracking <br>
+💠Clean card-based UI following modern design principles
+### 2. ⚡ Quick Check-In & Timeline Tracking
+💠Users can log Call, Text, or Video interactions <br>
+💠Automatically generates timeline entries with date and activity <br>
+💠Toast notifications for user actions
+### 3. 📊 Friendship Analytics
+💠Visual representation of interaction types using Pie Chart <br>
+💠Helps users understand their communication patterns

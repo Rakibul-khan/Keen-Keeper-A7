@@ -14,31 +14,45 @@ const Stats = () => {
     { name: "Video", value: videoData.length, fill: "#37a163" },
   ];
   return (
-    <div className="flex justify-center items-center min-h-[70vh] ">
-      <PieChart
-        style={{
-          width: "100%",
-          maxWidth: "500px",
-          maxHeight: "80vh",
-          aspectRatio: 1,
-        }}
-        responsive
-      >
-        <Pie
-          data={data}
-          innerRadius="80%"
-          outerRadius="100%"
-          // Corner radius is the rounded edge of each pie slice
-          cornerRadius="50%"
-          fill="#8884d8"
-          // padding angle is the gap between each pie slice
-          paddingAngle={5}
-          dataKey="value"
-        />
-        <Tooltip></Tooltip>
+    <div className="bg-gray-100">
+      <h1 className="text-4xl font-bold w-10/12 mx-auto pt-10">
+        Friendship Analytics
+      </h1>
+      {textData.length == 0 && callData.length == 0 && videoData.length == 0 ? (
+        <h1 className="h-[50vh] font-bold text-4xl flex justify-center items-center">
+          Stats is Empty
+        </h1>
+      ) : (
+        <div className="shadow rounded-xl bg-white  w-10/12 mx-auto my-10 p-8">
+          <h1 className="font-semibold text-xl ">By Interaction Type</h1>
+          <div className="flex  justify-center items-center  ">
+            <PieChart
+              style={{
+                width: "100%",
+                maxWidth: "500px",
+                maxHeight: "80vh",
+                aspectRatio: 1,
+              }}
+              responsive
+            >
+              <Pie
+                data={data}
+                innerRadius="80%"
+                outerRadius="100%"
+                // Corner radius is the rounded edge of each pie slice
+                cornerRadius="50%"
+                fill="#8884d8"
+                // padding angle is the gap between each pie slice
+                paddingAngle={5}
+                dataKey="value"
+              />
+              <Tooltip></Tooltip>
 
-        <Legend></Legend>
-      </PieChart>
+              <Legend></Legend>
+            </PieChart>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
